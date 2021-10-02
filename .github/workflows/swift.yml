@@ -16,8 +16,8 @@ jobs:
     - name: Build
       run: swift build -v
       env:
-          DEVELOPER_DIR: /Applications/Xcode_13.app/Contents/Developer
+          DEVELOPER_DIR: /Applications/Xcode.app/Contents/Developer
     - name: Run tests
       run: swift test -v
       env:
-          DEVELOPER_DIR: /Applications/Xcode_13.app/Contents/Developer
+          DEVELOPER_DIR: /Applications/Xcode13.app/Contents/Developer
