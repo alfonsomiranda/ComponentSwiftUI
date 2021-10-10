@@ -10,12 +10,17 @@ import SwiftUI
 @available(macOS 10.15, *)
 @available(iOS 13.0, *)
 public struct AMCButton: View {
-    public init() {
-            
+    public typealias ActionHandler = ((Int) -> ())
+    var onDidTouch: ActionHandler?
+    
+    public init(onDidTouch: @escaping ActionHandler) {
+        self.onDidTouch = onDidTouch
     }
     
     public var body: some View {
-        Text("Welcome to AMCButton")
+        Button("Esto es un botón uwu") {
+            self.onDidTouch?(1)
+        }
     }
 }
 
@@ -23,6 +28,8 @@ public struct AMCButton: View {
 @available(iOS 13.0, *)
 struct AMCButton_Previews: PreviewProvider {
     static var previews: some View {
-        AMCButton()
+        AMCButton { count in
+            debugPrint(count)
+        }
     }
 }
