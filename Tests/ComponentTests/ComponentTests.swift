@@ -6,6 +6,6 @@ final class ComponentTests: XCTestCase {
         // This is an example of a functional test case.
         // Use XCTAssert and related functions to verify your tests produce the correct
         // results.
-        XCTAssertEqual(Component().version, "1.0.3")
+        XCTAssertEqual(Component().version, "1.0.4")
     }
 }
