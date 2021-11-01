@@ -18,7 +18,7 @@ public struct AMCButton: View {
     }
     
     public var body: some View {
-        Button("Esto es un botón uwu") {
+        Button("Esto es un botón") {
             self.onDidTouch?(1)
         }
     }
